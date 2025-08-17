@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="form" autocomplete="off">
+    <h2>Registration Form</h2>
+    
+    <label for="firstName">First Name*</label>
+    <input id="firstName" name="firstName" placeholder="Enter First Name" required>
+
+    <label for="lastName">Last Name*</label>
+    <input id="lastName" name="lastName" placeholder="Enter Last Name" required>
+
+    <label for="fatherName">Father's Name*</label>
+    <input id="fatherName" name="fatherName" placeholder="Enter Father's Name" required>
+
+    <label for="motherName">Mother's Name*</label>
+    <input id="motherName" name="motherName" placeholder="Enter Mother's Name" required>
+
+    <label for="dob">Date of Birth*</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <div class="gender-group">
+      <span>Gender*</span><br>
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Other"> Other</label>
+    </div>
+
+    <label for="address">Address*</label>
+    <textarea id="address" name="address" placeholder="Enter Address" required></textarea>
+
+    <label for="education10">10th Details*</label>
+    <input id="education10" name="education10" placeholder="Enter 10th Details" required>
+
+    <label for="education12">12th Details*</label>
+    <input id="education12" name="education12" placeholder="Enter 12th Details" required>
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+    <label for="contact">Contact (10 digits)*</label>
+    <input type="tel" id="contact" name="contact" placeholder="Enter Contact Number" pattern="\d{10}" required>
+
+    <label for="photo">Upload Photo*</label>
+    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+
+    <label for="signature">Upload Signature*</label>
+    <input type="file" id="signature" name="signature" accept=".jpg,.jpeg,.png" required>
+
+    <div class="btn-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <div id="res" style="display:none;">
+    <h3>Submitted Data</h3>
+    <pre id="out"></pre>
+    <img id="photoPreview" alt="Uploaded Photo">
+    <img id="signPreview" alt="Uploaded Signature">
+    <br>
+    <button onclick="newForm()">New</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
